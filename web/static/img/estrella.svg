@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="74.999977pt"
+   height="66.914284pt"
+   viewBox="0 0 74.999977 66.914284"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg3562"
+   sodipodi:docname="estrella.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11">
+  <defs
+     id="defs3566" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview3564"
+     showgrid="false"
+     inkscape:zoom="0.51531863"
+     inkscape:cx="835.73425"
+     inkscape:cy="678.59899"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3562" />
+  <metadata
+     id="metadata3556">
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     transform="matrix(0.00596943,0,0,-0.00596943,-0.78792364,73.065823)"
+     id="g3560"
+     style="fill:#000000;stroke:none">
+    <path
+       d="m 6208,11998 c -69,-134 -487,-938 -928,-1788 -441,-850 -803,-1546 -804,-1547 -1,-1 -578,-81 -1281,-178 -704,-97 -1572,-216 -1930,-265 -357,-50 -759,-105 -893,-122 -133,-18 -241,-36 -240,-40 2,-4 707,-663 1568,-1465 1165,-1085 1565,-1462 1563,-1478 -1,-11 -63,-360 -138,-775 -229,-1269 -595,-3284 -600,-3308 -5,-19 309,135 1938,949 l 1942,972 1787,-897 c 1498,-752 1787,-901 1790,-919 3,-20 9,-22 62,-22 h 60 l 8,35 c 30,118 24,109 78,116 28,4 50,9 50,13 0,3 -18,107 -40,231 -66,366 -132,731 -270,1505 -72,402 -153,854 -180,1005 -27,151 -79,442 -115,645 -36,204 -70,390 -75,415 -9,44 -9,46 28,80 462,424 3111,2885 3108,2887 -2,3 -980,140 -2173,307 l -2168,302 -60,116 c -33,63 -449,870 -925,1792 l -865,1676 h -85 -86 z"
+       id="path3558"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+.footer{
+    display: grid;
+    grid-area: ff;
+    background: #022037;
+}
+.autor{
+    font-size: 1.6rem;
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.autor img{
+    max-height: 30px;
+    padding: 0 5px 0 0;
+}
+
+.autor a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.autor a:hover{
+    color:#FF9200;
+}
+
+.copy{
+    text-align: center;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.copy span{
+    color: #FF9200;
+}
+
+@media (max-width : 650px){
+    .autor{
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+    .autor img{
+        max-height: 15px;
+        padding: 0 5px 0 0;
+    }
+    .copy{
+      
+        font-size: 1rem;
+    }
+    
+}
+
+@media (max-width : 499px){
+    .autor{
+        font-size: 1.1rem;
+        padding: 6px;
+    }
+    .autor img{
+        max-height: 12px;
+        
+    }
+    .copy{
+      
+        font-size: .8rem;
+    }
+}

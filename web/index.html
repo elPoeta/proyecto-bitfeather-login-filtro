@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:300,400,500,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/reset.css">
+    <link rel="stylesheet" href="static/css/quill.snow.css">
+    <link rel="stylesheet" href="static/css/contenedor-estilo.css">
+    <link rel="stylesheet" href="static/css/header-estilo.css">
+    <link rel="stylesheet" href="static/css/navegacion-estilo.css">
+    <link rel="stylesheet" href="static/css/login.css">
+    <link rel="stylesheet" href="static/css/mainSection-estilo.css">
+    <link rel="stylesheet" href="static/css/menuLateral-estilo.css">
+    <link rel="stylesheet" href="static/css/footer-estilo.css">
+
+    <title>bitfther\>_</title>
+</head>
+<body>
+ <div class="contenedor">
+        <div class="header">
+                <header class="titulo">
+                    <figure>
+                        <a href="index.html"><img src="static/img/logo.svg" alt="bitfeather" class="logo-header"></a>
+                    </figure>
+                    <h1><a href="index.html">bitfeather\><span class="blink">_</span></a></h1>
+                </header>
+                <nav class="nav-bar">
+                        <ul>
+                            <li><a href="#" id="nav-post">Posts</a></li>
+                            <li><a href="#">Más Vistos</a></li>
+                            <li><a href="#" id="selecion-categoria-navbar">Categorias<p class="rotar">&#8964;</p></a></li>
+                        </ul>
+                </nav>
+                <div class="busqueda">
+                    <figure>
+                        <img src="static/img/lupa.svg" alt="lupa" class="logo-lupa">
+                    </figure>
+                    <form action="" method="get">
+                            <input type="search" name="buscar" id="buscar" placeholder="Buscar...">
+                    </form>
+                </div>
+                <div class="usuario">
+                    <figure>
+                        <div class="marco-logo-user">
+                                <img src="static/img/user.svg" alt="user-logo" class="logo-user">
+                        </div>
+                    </figure>
+                    <a href="#" class="login-user" id="login-header">Login</a>
+                </div>
+        </div>
+        
+        <section class="main-section">
+            <div id="panel-main"></div>
+        </section>
+        
+        <aside class="side-menu">
+                <div class="side-contenedor">  
+                        <div class="side-menu-crear">
+                            <a href="#" id="crear-post" class="side-menu-item">
+                                <figure>
+                                        <img src="static/img/crearPost.svg" alt="crearPost" class="side-icon">
+                                </figure>
+                                   
+                                <span class="texto-sideMenu">Crear Post</span></a>
+                       </div>
+                        <div class="side-menu-post">
+                            <a href="#" id="mis-posts" class="side-menu-item">
+                                 <figure>
+                                    <img src="static/img/misPosts.svg" alt="misposts" class="side-icon">
+                                </figure>
+                 
+                                <span class="texto-sideMenu">Mis Posts</span></a>
+                         </div>
+                        <div class="side-menu-cuenta">
+                            <a href="#" id="micuenta" class="side-menu-item">
+                             <figure>
+                                    <img src="static/img/settings.svg" alt="micuenta" class="side-icon">
+                             </figure>   
+                             <span class="texto-sideMenu">Mi Cuenta</span></a>
+                        </div>
+                 </div>     
+        </aside>
+       
+        <footer class="footer">
+            <div>
+                <p class="autor"><a href="https://www.linkedin.com/in/leonardo-tosetto" target="_blank"><img src="static/img/linkedin.svg">Leonardo Tosetto</a> | <a href="https://github.com/elPoeta" target="_blank"><img src="static/img/github.svg">@elPoeta</a> | <a href="https://t.me/elPoetaDeveloper" target="_blank"><img src="static/img/telegram.svg">@elPoetaDeveloper</a></p>   
+                </div>
+                <div >
+                    <p class="copy"><span>&copy;</span> 2018</p>
+                </div>
+        </footer>
+    
+
+      <div class="menu-horizontal-padre">
+        <div class="menu-horizontal-categorias hide-menu"  id="menu-horizontal-cat">
+            <ul class="menu-horizontal" id="panel-menuHorizontal">
+              
+             </ul>
+         </div>
+    </div>  
+ 
+        <div class="boton-flotante">
+            <button id="nav-icon-hamburger">&#9776;</button>
+        </div>
+      
+             <div class="nav-panel">
+        <a href="#" class="btn-cerrar" id="btn-nav-panel">&times;</a>
+        <ul class="panel-menu">
+            <li><a href="#">Posts</a></li>
+            <li> <a href="#">Más Vistos</a> </li>
+            <li>
+                    <a href="#" id="submenu-categorias">Categorias<p class="rotar">&#8964;</p></a>
+                    <ul class="submenu hide-menu" id="panel-sideMenu">
+                        
+                    </ul>
+            </li>
+           </ul>
+        </div>  
+    
+    </div>
+ <img id="loading" src="static/img/loading.svg" alt="Loading">
+    <!--LOGIN -->
+
+<div id="simpleModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+          <span id="closeBtn">&times;</span>
+          <h2>
+              <label for="toggle-log" class="toggle" id="toggle-log-label">Login</label>
+              <label for="toggle-sign" class="toggle" id="toggle-sign-label">Registrarse</label>
+    
+          </h2>
+      </div>
+      <div class="modal-body">
+          <div class="wrapper">
+      <div class="container">  
+
+        <input type="radio" name="toggles" id="toggle-log" class="toggle" checked="checked" />
+        <input type="radio" name="toggles" id="toggle-sign" class="toggle" />
+        
+        <div class="panel" id="login">
+          <label for="log-email">Email</label>
+          <input id="log-email" />
+          <label for="log-pass">Password</label>
+          <input type="password" id="log-pass" />
+      
+          <button id="btn-login">Login</button>
+        </div>
+      
+        <div class="panel" id="signup">
+          <label for="sign-nombre">Nombre</label>
+          <input id="sign-nombre" /> 
+          <label for="sign-email">Email</label>
+          <input id="sign-email" type="email"/>
+          <label for="sign-pass">Password</label>
+          <input type="password" id="sign-pass" />
+          <label for="sign-confirm">Confirmar password</label>
+          <input type="password" id="sign-confirm" />
+      
+          <button id="btn-registrar">Registrarse</button>
+        </div>
+      </div>
+    </div> 
+      </div>
+     
+    </div>
+  </div>   
+    
+    <script src="static/js/quill.min.js"></script>
+    <script src="static/js/image-resize.min.js"></script>
+    <script src="static/js/categoria.js"></script>
+    <script src="static/js/menu.js"></script>
+    <script src="static/js/post.js"></script>
+    <script src="static/js/crearPost.js"></script>
+    <script src="static/js/displayPost.js"></script>
+     <script src="static/js/registro.js"></script>
+     <script src="static/js/login.js"></script>
+    <script src="static/js/main.js"></script> 
+</body>
+</html>

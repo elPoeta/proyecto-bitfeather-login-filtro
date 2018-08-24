@@ -1,0 +1,224 @@
+.main-section{
+    display: grid;
+    grid-area: mc;
+    padding: 20px 0;
+
+}
+
+.titulo-main{
+    font-size: 3rem;
+    color: #022037;
+    padding: 20px;
+}
+
+.main-crear-post{
+    box-sizing : border-box;
+    max-width: 90%;
+    align-items : center;  
+    background : #FFE0AA;
+    color : #022037;
+    border : 1px solid #333;
+    margin : auto;
+    padding : 10px;
+    border-radius : 25px;
+}
+.contenedorFieldsetCrearPost{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#form-crearPost label h3{
+    margin: 3px;
+    padding: 5px;
+}
+#form-crearPost input, #form-crearPost select, label{
+    padding: 5px;
+    font-size: .9rem;  
+}
+
+
+.fieldsetCrearPost{
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #022037;
+
+}
+
+.fieldsetCrearPost legend{
+    color: #FF9200;
+    background: #022037;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0;
+    width: 10em;
+    border: 2px solid #FF9200;
+    border-radius: 5px;
+}
+#btn-publicar-post{
+    display: block;
+    margin: 10px 5px 5px 0;
+    position: relative;
+    left: 80%;
+    padding: 10px;
+    font-size: 1.3rem;
+    border: 0;
+    border-radius: 90px;
+    background: #00561D;
+    color: #FFE0AA;
+    box-shadow: 3px 3px #888;
+    
+}
+#btn-publicar-post:hover{
+    background: #297C45;
+}
+
+#editor{
+    background: #fff;
+    color: #000;
+    height: 500px;
+}
+
+.ql-toolbar{
+    background: #fff;
+}
+.article-post {
+    box-sizing : border-box;
+    max-width: 50%;
+    align-items : center;  
+    background : #FFE0AA;
+    color : #022037;
+    border : 1px solid #333;
+    margin : auto;
+    padding : 10px;
+    border-radius : 25px;
+    transform: scale(0.95);
+    transition: box-shadow 0.5s, transform 0.5s;
+  }
+    .article-post h2 a{
+        font-size: 2rem;
+        font-weight: 600;
+        color: #022037;
+        text-transform: capitalize;
+    }
+    .article-post p{
+        font-size: 1.2rem;
+        font-style: italic;
+        text-align: center;
+
+    }
+    .article-post ul{
+        list-style: none;
+    }
+
+    .article-post ul li{
+        padding: 5px;
+    }
+     .article-post:hover {
+        transform: scale(0.90);
+        box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.6);
+     }
+ 
+     .blog-post{
+        box-sizing : border-box;
+        max-width: 95%;
+        align-items : center;  
+        background : #FFF;
+        color : #000;
+        border : 1px solid #333;
+        margin : auto;
+        padding : 10px;
+        border-radius : 25px;
+    }
+    #blog{
+        max-width: 95%;
+        margin: auto;
+    }
+    #blog img {
+        max-width: 90%;
+    }
+    .subtitulo-blogPost{
+        font-size: 1.2rem;
+        text-indent: 2rem;
+    }
+
+    @media (max-width : 1300px){
+        .main-section{
+            padding: 18px 0;
+        
+        }
+        
+        .titulo-main{
+            font-size: 2.5rem;
+            padding: 18px;
+        }
+        
+        .main-crear-post{
+            max-width: 95%;
+        }
+        #btn-publicar-post{
+            padding: 8px;
+            font-size: 1.1rem;
+
+        }
+        .article-post {
+            max-width: 70%;
+          }
+            .article-post h2 a{
+                font-size: 1.8rem;
+            }
+            .article-post p{
+                font-size: 1.1rem;
+            }
+      
+            .subtitulo-blogPost{
+                font-size: 1.1rem;
+        
+            }
+    }
+
+@media (max-width : 950px){
+    .main-section{
+        padding: 15px 0;
+    
+    }
+    
+    .titulo-main{
+        font-size: 2.2rem;
+    }
+    
+    .main-crear-post{
+        max-width: 98%;
+    }
+
+    .article-post {
+        max-width: 80%;
+      }
+        .article-post h2 a{
+            font-size: 1.5rem;
+        }
+        .article-post p{
+            font-size: 1rem;
+        }
+}
+
+@media (max-width : 650px){
+
+    .main-crear-post{
+        max-width: 100%;
+    }
+    .contenedorFieldsetCrearPost{
+        grid-template-columns:  1fr;
+    }
+    #form-crearPost input, #form-crearPost select, label{
+        font-size: .8rem;  
+    }
+    
+    .fieldsetCrearPost legend{
+        font-size: .7em;
+        width: 7em;
+    }
+    .article-post {
+        max-width: 90%;
+      }
+}
+

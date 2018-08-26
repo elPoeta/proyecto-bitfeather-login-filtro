@@ -1,18 +1,17 @@
 let displayPosts = new DisplayPost();
 const crearPost = document.querySelector('#crear-post');
 let verPost = document.querySelector('#nav-post');
-const traerPosts = new Post();
+
 const URL_CATEGORIAS = 'api/categoriaServer';
 
-const traerCategorias = new Categoria();
 let categorias = [];
 
 
 
 crearPost.addEventListener('click', (e) =>{
     const URL_CREAR_POST_SERVER_PRIVADO = 'api/privado/CrearPostServer';
-    let post = new Post();
-    post.get(URL_CREAR_POST_SERVER_PRIVADO)
+
+    Http.get(URL_CREAR_POST_SERVER_PRIVADO)
             .then(data => {
              console.log('data >>',data); 
              if(data !=='error'){
@@ -30,17 +29,20 @@ verPost.addEventListener('click', ()=>{
 });
 
 const iniciar = () =>{
-	traerCategorias.get(URL_CATEGORIAS)
+	Http.get(URL_CATEGORIAS)
 	.then(data => {
 		 data.map(c => {
 	         return   categorias.push(c);
 	     });
-	     });
+	     })
+              .catch(error =>{
+                console.log(error);         
+             });
 	buscarPost();
 };
 function buscarPost(){
     loading(true); 
-	 traerPosts.get('api/postServer?&q=0')
+	 Http.get('api/postServer?&q=0')
      .then(data => {
     	 displayPosts.mostrarTodos(data);
       loading(false);

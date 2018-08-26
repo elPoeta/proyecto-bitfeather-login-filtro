@@ -1,17 +1,26 @@
-class Post{
+/* global fetch */
 
-	async get(url) {
+class Http{
+
+	static async get(url) {
+        try{
         const respuesta = await fetch(url, { 
             method: 'GET',
              headers: {
                 'Content-type': 'application/json'
-            }
+            },
+            credentials: 'same-origin'
            });
-        let posts = JSON.parse(await respuesta.text());
-        return posts;
+           
+        let datos = JSON.parse(await respuesta.text());
+        return datos;
+          }catch (err) {
+         throw new Error(err);
+  }
     }
 	
-	async insertar(url, data) {
+	static async post(url, data) {
+        try{    
         const respuesta = await fetch(url, {
             method: 'POST',
             headers: {
@@ -21,7 +30,11 @@ class Post{
              /*credentials: 'include'  */
               credentials: 'same-origin' 
         });
-        return respuesta;
+            return respuesta;
+        }catch (err) {
+         throw new Error(err);
+  }
+        
     }
 
 }

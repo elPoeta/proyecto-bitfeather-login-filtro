@@ -43,9 +43,9 @@ class DisplayPost{
 
 	    mostrarBlogPost(id){
                 console.log('id>> ',id);
-	    	let traerPost = new Post();
+	    	
                 loading(true);
-	    	traerPost.get(`api/postServer?&q=${id}`)
+	        Http.get(`api/postServer?&q=${id}`)
 	    	.then(data => {
                         console.log(data);
 	    		//let cuerpo = JSON.parse(data.cuerpo);

@@ -88,7 +88,7 @@ class CrearPost{
     }
 
     publicarPost(){
-    	console.log('Publicar')
+    	console.log('Publicar');
     	let posteo = {};
     	let titulo = document.querySelector('#crear-titulo');
         let subTitulo = document.querySelector('#crear-subtitulo');
@@ -105,8 +105,8 @@ class CrearPost{
         posteo.categoria = cat;
         //posteo.autor = autor;
         const URL_PUBLICAR_POST = 'api/privado/CrearPostServer';
-        let p = new Post();
-        p.insertar(URL_PUBLICAR_POST, posteo);
+       
+        Http.post(URL_PUBLICAR_POST, posteo);
     }
  
 }

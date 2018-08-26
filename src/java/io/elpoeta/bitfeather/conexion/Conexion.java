@@ -14,7 +14,8 @@ public class Conexion {
      private static Conexion INSTANCE = null;
     
      //private static String LABASE = "jdbc:hsqldb:file:db-data/demoposthsqldb";
-     private static String LABASE = "jdbc:hsqldb:file:/home/elpoeta/Documentos/db/demopost";
+     private static String LABASE = "jdbc:hsqldb:file:~/db/demopost";
+ 
      private static String LABASEUSUARIO = "SA";
      private static String LABASECLAVE = "";
 //     private static String LABASE = "jdbc:mysql://localhost/db_postconfiltro";

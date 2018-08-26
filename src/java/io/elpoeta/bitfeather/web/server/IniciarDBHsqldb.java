@@ -1,7 +1,10 @@
 
 package io.elpoeta.bitfeather.web.server;
 
+import io.elpoeta.bitfeather.conexion.Conexion;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -21,26 +24,32 @@ import org.hsqldb.server.ServerAcl.AclFormatException;
  */
 @WebServlet(name = "IniciarDBHsqldb", urlPatterns = {"/IniciarDBHsqldb"}, loadOnStartup = 1)
 public class IniciarDBHsqldb extends HttpServlet {
-
+  Conexion con;
     @Override
     public void init() throws ServletException {
         super.init();
+
         try {
         System.out.println("Starting Database");
         HsqlProperties p = new HsqlProperties();
-        p.setProperty("server.database.0", "file:/home/elpoeta/Documentos/db");
+       // p.setProperty("server.database.0", "file:/home/elpoeta/Documentos/db");
+       // p.setProperty("server.dbname.0", "demopost");
+        p.setProperty("server.database.0", "file:~/db");
         p.setProperty("server.dbname.0", "demopost");
         p.setProperty("server.port", "9001");
         Server server = new Server();
-        server.setProperties(p); 
-        server.setLogWriter(null); 
+        server.setProperties(p);
+        server.setLogWriter(null);
         server.setErrWriter(null); 
         server.start();
+
+
     } catch (IOException ioex) {
         throw new ServletException(ioex);
     }   catch (AclFormatException ex) { 
             Logger.getLogger(IniciarDBHsqldb.class.getName()).log(Level.SEVERE, null, ex);
         } 
+      
     }
 
     @Override
@@ -55,7 +64,5 @@ public class IniciarDBHsqldb extends HttpServlet {
             throws ServletException, IOException {
        
     }
-
-  
 
 }

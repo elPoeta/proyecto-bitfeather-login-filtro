@@ -3,8 +3,6 @@ package io.elpoeta.bitfeather.web.server;
 
 import io.elpoeta.bitfeather.conexion.Conexion;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -32,11 +30,11 @@ public class IniciarDBHsqldb extends HttpServlet {
         try {
         System.out.println("Starting Database");
         HsqlProperties p = new HsqlProperties();
-       // p.setProperty("server.database.0", "file:/home/elpoeta/Documentos/db");
-       // p.setProperty("server.dbname.0", "demopost");
-        p.setProperty("server.database.0", "file:~/db");
+        
+        p.setProperty("server.database.0", "file:resources/db");
         p.setProperty("server.dbname.0", "demopost");
         p.setProperty("server.port", "9001");
+        
         Server server = new Server();
         server.setProperties(p);
         server.setLogWriter(null);

@@ -21,41 +21,6 @@ function closeModal(){
 
 }
 
-class Login{
-    	
-	/*async insertar(url, data) {
-        try {    
-        const respuesta = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(data),
-             
-              credentials: 'same-origin' 
-        });
-        return respuesta;
-    } catch (err) {
-    throw new Error(err);
-  }
-   }*/
-    static async insertar(url, data) {
-        try {    
-        const respuesta = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify(data),
-             
-              credentials: 'same-origin' 
-        });
-        return respuesta;
-    } catch (err) {
-    throw new Error(err);
-  }
-   }
-}
 
 let logEmail = document.querySelector('#log-email');
 let logPass = document.querySelector('#log-pass');
@@ -67,8 +32,8 @@ btnLogin.addEventListener('click', (e)=>{
    loginUsuario.email = logEmail.value;
    loginUsuario.password = logPass.value;
    console.log(loginUsuario);
-   //let login = new Login();
-   Login.insertar(URL_LOGIN_SERVER,loginUsuario)
+
+   Http.post(URL_LOGIN_SERVER,loginUsuario)
            .then(response => response.json())
   .then( data => {
            if(data !== null && data !== 'error'){
@@ -79,8 +44,5 @@ btnLogin.addEventListener('click', (e)=>{
     }).catch (err => {
        console.log("error",err);
 });
-
-   
-
   
 });

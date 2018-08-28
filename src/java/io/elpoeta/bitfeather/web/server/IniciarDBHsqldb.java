@@ -30,7 +30,7 @@ public class IniciarDBHsqldb extends HttpServlet {
         try {
         System.out.println("Starting Database");
         HsqlProperties p = new HsqlProperties();
-        
+        //p.setProperty("server.database.0", "file:~/db");
         p.setProperty("server.database.0", "file:resources/db");
         p.setProperty("server.dbname.0", "demopost");
         p.setProperty("server.port", "9001");

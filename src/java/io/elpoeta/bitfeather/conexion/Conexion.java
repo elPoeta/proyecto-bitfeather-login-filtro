@@ -12,8 +12,8 @@ import java.sql.SQLException;
  */
 public class Conexion {
      private static Conexion INSTANCE = null;
-     //private static String LABASE = "jdbc:hsqldb:file:~/db/demopost";
-     private static String LABASE = "jdbc:hsqldb:file:resources/db/demopost";
+     private static String LABASE = "jdbc:hsqldb:file:~/BBDD/db/demopost";
+     //private static String LABASE = "jdbc:hsqldb:file:resources/db/demopost";
      private static String LABASEUSUARIO = "SA";
      private static String LABASECLAVE = "";
     

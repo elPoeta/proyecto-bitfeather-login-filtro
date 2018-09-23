@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="75.000046pt"
+   height="78.528358pt"
+   viewBox="0 0 75.000046 78.528358"
+   preserveAspectRatio="xMidYMid meet"
+   id="svg5382"
+   sodipodi:docname="pulgarArriba.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11">
+  <defs
+     id="defs5386" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview5384"
+     showgrid="false"
+     inkscape:zoom="0.49277344"
+     inkscape:cx="814.6729"
+     inkscape:cy="852.53329"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5382" />
+  <metadata
+     id="metadata5374">
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+<rdf:RDF>
+  <cc:Work
+     rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type
+       rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:title></dc:title>
+  </cc:Work>
+</rdf:RDF>
+</metadata>
+  <g
+     transform="matrix(0.00613829,0,0,-0.00613829,2.8696169e-4,78.565187)"
+     id="g5380"
+     style="fill:#000000;stroke:none">
+    <path
+       d="m 7271,12780 c -79,-21 -133,-55 -155,-98 -8,-16 -18,-93 -25,-187 -80,-1109 -253,-1873 -531,-2343 -141,-238 -279,-387 -585,-630 -340,-271 -528,-471 -629,-670 -15,-30 -72,-165 -128,-300 -300,-738 -565,-1282 -836,-1719 -265,-425 -548,-739 -783,-867 -116,-63 -180,-76 -365,-76 H 3070 V 3265 c 0,-1444 2,-2625 5,-2625 3,0 62,-11 132,-24 71,-14 251,-48 400,-75 150,-28 393,-73 540,-101 C 5891,116 5735,142 6064,115 6549,76 7092,42 7630,18 7999,2 9028,2 9280,18 c 515,34 826,90 1010,182 324,163 742,555 873,818 l 42,85 6,336 c 4,246 9,345 19,371 29,76 94,154 305,366 236,236 306,319 360,429 80,163 68,256 -85,635 -101,252 -140,380 -140,464 0,103 64,208 270,441 229,260 292,369 276,481 -10,75 -62,184 -179,376 -202,333 -256,458 -243,557 10,73 56,154 182,321 223,295 252,353 240,486 -19,213 -189,556 -409,829 -83,103 -245,260 -322,311 -169,114 -421,159 -1110,195 -242,13 -1334,18 -2050,9 l -410,-5 -24,70 c -48,138 -29,362 53,622 81,256 179,480 450,1021 107,215 214,434 236,488 85,205 148,438 187,698 22,140 25,637 5,761 -73,454 -193,740 -413,978 -296,321 -816,521 -1138,437 z"
+       id="path5376"
+       inkscape:connector-curvature="0" />
+    <path
+       d="M 386,6129 C 263,6100 123,5990 62,5874 -4,5747 0,5939 0,3200 0,1019 2,707 15,651 58,469 202,322 385,274 c 64,-17 1712,-20 1785,-3 181,42 346,215 380,398 14,74 14,4988 0,5062 -34,183 -199,356 -380,398 -57,13 -1728,13 -1784,0 z"
+       id="path5378"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

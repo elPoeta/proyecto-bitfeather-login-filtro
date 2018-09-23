@@ -1,0 +1,338 @@
+.header{
+    display: grid;
+    grid-area: hh;
+    background: #FF9200;
+    grid-template-columns: repeat(6, 2fr);
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    top : 0px;
+    z-index: 100;
+}
+
+.titulo{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+.logo-header{
+    max-height: 70px;
+    padding-left: 10px;
+}
+
+.titulo h1{
+    text-transform: lowercase;
+    font-size: 3rem;
+    text-align: left;
+    font-weight: 900;
+    margin: auto;
+}
+
+.titulo h1 a{
+    color: #022037;
+}
+
+.titulo h1 a:hover{
+        color:#FFE0AA;
+}
+
+.blink{
+    animation: blinker 1s linear infinite;
+}
+
+.nav-bar{
+    grid-column: 2 / 5;
+    display: grid;
+    grid-template-columns: 3fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.nav-bar ul{
+    list-style: none;
+}
+
+.nav-bar ul li{
+    display: inline-grid;
+    align-items: center;
+    padding: 12px; 
+}
+
+.nav-bar ul li a{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #022037;
+}
+
+.nav-bar ul li a:hover{
+    color: #FFE0AA;
+    border-bottom: 1px solid #FFE0AA;
+}
+
+.busqueda{
+    grid-column: 5 / 6;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+.logo-lupa{
+    max-height: 40px;
+}
+#buscar{
+    font-size: 1.2rem;
+    height: auto;
+    width: 100%;
+    padding: 4%;
+    border: 3px solid #022037;
+    border-radius: 15px;
+    color: #022037;
+    background: rgba(255, 146, 0, .6);
+}
+
+.usuario{
+    grid-column: 6 / -1;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    justify-content: right;
+    align-content: center;
+    margin: auto;
+}
+
+.login-user{
+    text-align: right;
+    align-self: center;
+    padding-right: 5px;
+    font-size: 1.3rem;
+    color: #022037;
+    font-weight: 800;
+}
+.marco-logo-user{
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    border: 3px solid #022037;
+    border-radius: 50%;
+    
+}
+.logo-user{
+    max-height: 40px;
+    padding: 10%;
+}
+@media (max-width : 1300px){
+    .titulo{
+        grid-template-columns: 80px 1fr;
+    }
+    
+    .logo-header{
+        max-height: 60px;
+        padding-left: 7px;
+    }
+    
+    .titulo h1{
+   
+        font-size: 2rem;
+    
+    }
+
+    .nav-bar ul li{
+        padding: 10px; 
+    }
+    
+    .nav-bar ul li a{
+        font-size: 1.2rem;
+    }
+    
+    .busqueda{
+        grid-template-columns: 40px 1fr;
+    }
+    .logo-lupa{
+        max-height: 40px;
+    }
+    #buscar{
+        font-size: 1rem;
+        padding: 3%;
+    }
+    
+    .usuario{
+        grid-template-columns: 80px 1fr;
+    }
+    
+    .login-user{
+        padding-right: 3px;
+        font-size: 1.2rem;
+    }
+    .marco-logo-user{
+        width: 45px;
+        height: 45px;     
+    }
+    .logo-user{
+        max-height: 25px;
+    }
+}
+@media (max-width : 950px){
+    .titulo{
+        grid-template-columns: 60px 1fr;
+    }
+    
+    .logo-header{
+        max-height: 35px;
+        padding-left: 5px;
+    }
+    
+    .titulo h1{
+   
+        font-size: 1.4rem;
+    
+    }
+
+    .nav-bar ul li{
+        padding: 5px; 
+    }
+    
+    .nav-bar ul li a{
+        font-size: .9rem;
+    }
+    
+    .busqueda{
+        grid-template-columns: 20px 1fr;
+    }
+    .logo-lupa{
+        max-height: 20px;
+    }
+    #buscar{
+        font-size: .7rem;
+        padding: 2%;
+    }
+    
+    .usuario{
+        grid-template-columns: 50px 1fr;
+    }
+    
+    .login-user{
+        padding-right: 2px;
+        font-size: 1rem;
+    }
+    .marco-logo-user{
+        width: 30px;
+        height: 30px;     
+    }
+    .logo-user{
+        max-height: 15px;
+    }
+}
+
+@media (max-width : 650px){
+    .header{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .titulo{
+        grid-template-columns: 40px 1fr;
+    }
+    
+    .logo-header{
+        max-height: 30px;
+        padding-left: 10px;
+    }
+    
+    .titulo h1{
+
+        font-size: 1.3rem;
+   
+    }
+    
+    .nav-bar{
+     
+        display: none;
+       
+    }
+   
+    .busqueda{
+        grid-column: 3 / 5;
+        grid-template-columns: 30px 1fr;
+     
+    }
+    .logo-lupa{
+        max-height: 27px;
+    }
+    #buscar{
+        font-size: 1rem;
+        padding: 2%;
+        border: 2px solid #022037;
+        border-radius: 12px;
+    }
+    
+    .usuario{
+        grid-column: 6 / -1;
+        grid-template-columns: 40px 1fr; 
+    }
+    
+    .login-user{
+        font-size: 1.2rem;
+        padding-right: 3px;
+    }
+    .marco-logo-user{
+        width: 30px;
+        height: 30px;
+    }
+    .logo-user{
+        max-height: 17px;
+    }
+}
+
+@media (max-width : 499px){
+
+    .titulo{
+        grid-template-columns: 20px 1fr;
+    }
+    
+    .logo-header{
+        max-height: 18px;
+        padding-left: 5px;
+    }
+    
+    .titulo h1{
+        font-size: .8rem;
+        padding-left: 8px;
+    }
+  
+    .busqueda{
+        grid-template-columns: 20px 1fr;
+     
+    }
+    .logo-lupa{
+        max-height: 15px;
+    }
+    #buscar{
+        font-size: .7rem;
+        padding: 2%;
+    }
+    
+    .usuario{
+        grid-column: 6 / -1;
+        grid-template-columns: 30px 1fr; 
+    }
+    
+    .login-user{
+        font-size: .8rem;
+        padding-right: 3px;
+    }
+    .marco-logo-user{
+        width: 25px;
+        height: 25px;
+        border: 2px solid #022037;
+    }
+    .logo-user{
+        max-height: 15px;
+    }
+}
+@keyframes blinker {
+    50% {
+          opacity: 0;
+         }
+       }

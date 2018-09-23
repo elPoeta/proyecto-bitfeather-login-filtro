@@ -14,8 +14,13 @@ crearPost.addEventListener('click', (e) =>{
     Http.get(URL_CREAR_POST_SERVER_PRIVADO)
             .then(data => {
              console.log('data >>',data); 
-              let crearPost = new CrearPost();
+             if(data != 'error'){
+                let crearPost = new CrearPost();
                 crearPost.mostrarCrearPost();
+             }
+              else{
+                  window.location.replace("login.html");
+              }
             
     })
       .catch(err =>{

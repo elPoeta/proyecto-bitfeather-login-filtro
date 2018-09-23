@@ -42,8 +42,8 @@ public class CrearPostFiltro implements Filter {
             
         } else {
             System.out.println("...UPA PrivadoFiltra ..............................." + userActual);
-            //response.getWriter().print(CONVERTIR.toJson("error"));
-            request.getRequestDispatcher("../login.html").forward(request, response);
+            response.getWriter().print(CONVERTIR.toJson("error"));
+            //request.getRequestDispatcher("../login.html").forward(request, response);
         }
     }
 

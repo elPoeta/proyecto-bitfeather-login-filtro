@@ -35,7 +35,8 @@
     color: #022037;
 }
 
-.titulo h1 a:hover{
+.titulo h1 a:hover,
+.login-user:hover{
         color:#FFE0AA;
 }
 

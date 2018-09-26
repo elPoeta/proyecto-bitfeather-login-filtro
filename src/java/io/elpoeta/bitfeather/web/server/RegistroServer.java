@@ -1,9 +1,11 @@
 
 package io.elpoeta.bitfeather.web.server;
 
-import com.google.gson.Gson;
+
 import io.elpoeta.bitfeather.domain.User;
 import io.elpoeta.bitfeather.repository.impl.UserRepositoryImpl;
+import io.elpoeta.bitfeather.util.GsonUtil;
+import io.elpoeta.bitfeather.util.ValidarEmail;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -20,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "RegistroServer", urlPatterns = {"/RegistroServer"})
 public class RegistroServer extends HttpServlet {
-    private final Gson CONVERTIR = new Gson();
+    
   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -39,18 +41,23 @@ public class RegistroServer extends HttpServlet {
         	
             String texto = request.getReader().readLine();
 
-            User userParametro = CONVERTIR.fromJson(texto, User.class);
+            User userParametro = GsonUtil.CONVERTIR.fromJson(texto, User.class);
             System.out.println(userParametro);
             User userBD = UserRepositoryImpl.getInstance().buscarPorEmail(userParametro.getEmail());  
             System.out.println(userBD);
-            if( userBD == null && userParametro.getPassword().equals(userParametro.getConfirmPassword()))
-            {
-                UserRepositoryImpl.getInstance().insertar(userParametro);
-                out.println(CONVERTIR.toJson("OK"));
-            }else{
-                  System.out.println("Error");
-                out.println(CONVERTIR.toJson("ERROR"));
-            }
+            if(validarUsuario(userParametro)){
+                        if( userBD == null && userParametro.getPassword().equals(userParametro.getConfirmPassword()))
+                      {
+                        UserRepositoryImpl.getInstance().insertar(userParametro);
+                         out.println(GsonUtil.CONVERTIR.toJson("OK"));
+                       }else{
+                            System.out.println("Error");
+                            out.println(GsonUtil.CONVERTIR.toJson("error"));
+                        }
+                      }else{
+                              out.println(GsonUtil.CONVERTIR.toJson("error"));
+                              }
+            
 
         } catch (ClassNotFoundException ex) {
             out.println("Verificar: " + ex.getMessage());
@@ -66,6 +73,16 @@ public class RegistroServer extends HttpServlet {
         }
     }
     
-
+    
+  private boolean validarUsuario(User u){
+    if(u.getNombre() != "" && u.getNombre() !=null 
+       && ValidarEmail.validate(u.getEmail()) 
+       && u.getPassword() != "" && u.getPassword() != null 
+       && u.getConfirmPassword() != "" && u.getConfirmPassword() !=null){
+        return true;
+    }
+      
+      return false;
+}
 
 }

@@ -1,5 +1,6 @@
 package io.elpoeta.bitfeather.domain;
 
+import io.elpoeta.bitfeather.util.ValidarEmail;
 import java.util.List;
 
 
@@ -37,8 +38,11 @@ public class User {
     }
 
     public void setEmail(String email) {
-      
-        this.email = email;
+        if(ValidarEmail.validate(email)){
+            this.email = email;
+        }else{
+            throw new IllegalArgumentException("Verificar email");
+        }
     }
 
     public String getPassword() {

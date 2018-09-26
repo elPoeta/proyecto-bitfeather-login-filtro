@@ -12,15 +12,23 @@ btnRegistrar.addEventListener('click', (e)=>{
    registroUsuario.password = signPass.value;
    registroUsuario.confirmPassword = signConfirm.value;
   console.log(registroUsuario);
+  
    Http.post('RegistroServer',registroUsuario)
            .then(response => response.json())
-           .then(data =>{
-             console.log('INSERT DATA');
-             console.log(data);
-            if(data !=='ERROR'){ 
-            closeModal();
-        }
-   });
+        .then( data => {
+           if(data !== null && data !== 'error'){
+            //window.location.replace("index.html");
+                    msgLogueo("Registro completado Inicia Sesion",'msg-color-ok')
+                    sw2();
+           }else{
+                      msgLogueo("Error al crear cuenta",'msg-color-error');
+
+           }
+                    
+    }).catch (err => {
+       console.log("error",err);
+       msgLogueo("Error al crear cuenta "+err, 'msg-color-error');
+});
    
 });
 

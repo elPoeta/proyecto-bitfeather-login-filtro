@@ -48,7 +48,7 @@ public class CrearPostServer extends HttpServlet {
         try {
         	System.out.println("<<POST-INS>>");
             String texto = request.getReader().readLine();
-            User user = (User)request.getSession().getAttribute("User");
+            User user = (User)request.getSession().getAttribute("user");
             Post postParametro = CONVERTIR.fromJson(texto, Post.class);
             postParametro.setUser(user);
             System.out.println(postParametro);

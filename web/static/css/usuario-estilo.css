@@ -1,0 +1,33 @@
+.panel-usuario{
+    width: 10%;
+    left:86%;
+    height: auto;
+    padding: 5px;
+    position: fixed;
+    z-index:100;
+    top: 76px;
+    background-color: #FFE0AA;
+    border: 2px solid #022037;
+    border-radius: 15px;
+    opacity: 1;   
+    overflow: hidden;
+    text-align: center;
+}
+.panel-usuario li{
+    padding: 9px;
+}
+.menu-usuario{
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 700;
+    color:#022037;
+}
+
+.menu-usuario:hover{
+    cursor: pointer;
+    color: #FF9200;
+}
+.hide-panel-usuario{
+    display : none;
+}
+

@@ -4,6 +4,7 @@ package io.elpoeta.bitfeather.web.server;
 import com.google.gson.Gson;
 import io.elpoeta.bitfeather.domain.User;
 import io.elpoeta.bitfeather.repository.impl.UserRepositoryImpl;
+import io.elpoeta.bitfeather.util.GsonUtil;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -21,11 +22,17 @@ import org.mindrot.jbcrypt.BCrypt;
  */
 @WebServlet(name = "LoginServer", urlPatterns = {"/LoginServer"})
 public class LoginServer extends HttpServlet {
-    private final Gson CONVERTIR = new Gson();
+    
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        User usuario = (User) request.getSession().getAttribute("user");
+        if( usuario != null ){
+            
+            response.getWriter().print(GsonUtil.CONVERTIR.toJson(usuario));
+        }else{
+            response.getWriter().print(GsonUtil.CONVERTIR.toJson("error"));
+        }
     }
 
 
@@ -38,22 +45,22 @@ public class LoginServer extends HttpServlet {
         	
             String texto = request.getReader().readLine();
             
-            User userParametro = CONVERTIR.fromJson(texto, User.class);
+            User userParametro = GsonUtil.CONVERTIR.fromJson(texto, User.class);
             System.out.println("PaR > "+userParametro);
             User userBD = UserRepositoryImpl.getInstance().buscarPorEmail(userParametro.getEmail()); 
             System.out.println("BD > "+userBD);
         
             if(userBD.getEmail().equals(userParametro.getEmail()) && BCrypt.checkpw(userParametro.getPassword(), userBD.getPassword()) && userBD.isIs_activo())
             {   
-                request.getSession().setAttribute("User", userBD);
-               System.out.println("...  logIN ..." + request.getSession().getAttribute("User") );
-               out.print(CONVERTIR.toJson("ok"));
+                request.getSession().setAttribute("user", userBD);
+               System.out.println("...  logIN ..." + request.getSession().getAttribute("user") );
+               out.print(GsonUtil.CONVERTIR.toJson("ok"));
              //out.println(CONVERTIR.toJson(autorBD));
                
             }else{
                 request.getSession().removeAttribute("user");
                System.out.println("...  logOUT ..." + request.getSession().getAttribute("user") );
-                out.print( CONVERTIR.toJson( "error"));
+                out.print( GsonUtil.CONVERTIR.toJson( "error"));
                 //out.println(CONVERTIR.toJson("error"));
             
             }

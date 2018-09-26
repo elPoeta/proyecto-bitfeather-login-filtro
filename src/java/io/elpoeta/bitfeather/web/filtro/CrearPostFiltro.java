@@ -35,7 +35,7 @@ public class CrearPostFiltro implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
         System.out.println("... POSTFiltra ...............................");
-        User userActual = (User)((HttpServletRequest)request).getSession().getAttribute("User");
+        User userActual = (User)((HttpServletRequest)request).getSession().getAttribute("user");
         if ( userActual !=null ) { 
             System.out.println("...OK PrivadoFiltra ............................... " + userActual);
             chain.doFilter(request, response);

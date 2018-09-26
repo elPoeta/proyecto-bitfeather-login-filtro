@@ -1,7 +1,7 @@
 let displayPosts = new DisplayPost();
 const crearPost = document.querySelector('#crear-post');
 let verPost = document.querySelector('#nav-post');
-
+const URL_LOGIN = 'LoginServer';
 const URL_CATEGORIAS = 'api/categoriaServer';
 
 let categorias = [];
@@ -44,6 +44,7 @@ const iniciar = () =>{
               .catch(error =>{
                 console.log(error);         
              });
+        Usuario.consultar(URL_LOGIN);
 	buscarPost();
 };
 function buscarPost(){
@@ -70,3 +71,26 @@ function loading(on) {
 }
 
 window.addEventListener("load",iniciar,false); 
+
+
+const login = document.querySelector('.login-user');
+
+login.addEventListener('click', e => {
+    if(document.querySelector('#login-header')){
+        location.replace('login.html');
+    }else
+         if(document.querySelector('#logout-header'))
+           {
+             if(!document.querySelector('#logout')){
+                 
+                 Usuario.panelUser();
+                 document.querySelector('.panel-usuario').classList.toggle('hide-panel-usuario');
+            } 
+            else{
+               
+               document.querySelector('.panel-usuario').classList.toggle('hide-panel-usuario');
+              }
+           
+        }
+  
+});

@@ -1,3 +1,4 @@
+
 let logEmail = document.querySelector('#log-email');
 let logPass = document.querySelector('#log-pass');
 let btnLogin = document.querySelector('#btn-login');
@@ -5,7 +6,7 @@ const URL_LOGIN_SERVER = 'LoginServer';
 
 
 const  loginMsg = document.querySelector('.loginMsg');
-const  login = document.querySelector('.login');
+const  loginFront = document.querySelector('.login-front');
 const  signupMsg = document.querySelector('.signupMsg');
 const  signup = document.querySelector('.signup');
 const  frontbox = document.querySelector('.frontbox');
@@ -20,7 +21,7 @@ function sw1() {
     signupMsg.classList.toggle("visibility");
   
     signup.classList.toggle('hide');
-    login.classList.toggle('hide');
+    loginFront.classList.toggle('hide');
 }
 
 switch2.addEventListener('click', sw2);
@@ -31,9 +32,9 @@ function sw2() {
     signupMsg.classList.toggle("visibility");
   
     signup.classList.toggle('hide');
-    login.classList.toggle('hide');
+    loginFront.classList.toggle('hide');
   }
-
+//
 //setTimeout(function(){
 //  sw1();
 //},1000);
@@ -50,12 +51,12 @@ btnLogin.addEventListener('click', (e)=>{
    loginUsuario.password = logPass.value;
    console.log(loginUsuario);
 
- Http.post(URL_LOGIN_SERVER,loginUsuario)
+   Http.post(URL_LOGIN_SERVER,loginUsuario)
            .then(response => response.json())
   .then( data => {
        console.log('log >>> ',data);
            if(data !== null && data !== 'error'){
-            window.location.replace("index.html");
+                location.replace("index.html");
            }else{
                       msgLogueo("Error al iniciar sesion",'msg-color-error');
 

@@ -1,5 +1,7 @@
 body{
-     font-family: 'Catamaran', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Catamaran', sans-serif;
     background:
     radial-gradient(circle farthest-side at 0% 50%,#fb1 23.5%,rgba(240,166,17,0) 0)21px 30px,
     radial-gradient(circle farthest-side at 0% 50%,#B71 24%,rgba(240,166,17,0) 0)19px 30px,
@@ -9,70 +11,66 @@ body{
     linear-gradient(90deg,#B71 2%,#fb1 0,#fb1 98%,#B71 0%)0 0 #fb1;
     background-size:40px 60px;
   }
-    .login-section{
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 80px 50px 1fr;
-      
-  }
-  
- .header{
+                 
+  .header{
     display: grid;
     background: #FF9200;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 80px;
     justify-content: center;
     align-content: center;
-    position: fixed;
+    position: sticky;
     top : 0px;
     z-index: 100;
-    width: 100%;
+    padding: 1px;
+    margin-bottom: .5%;
 }
 
 .logo-header{
-       max-height: 70px;
-       padding: 5px;
+    max-height: 50px;
+    padding: 5px;
 }
 
 .titulo-header{
-    text-transform: lowercase;
     font-size: 3.1em;
-     align-self: center;
+    text-transform: lowercase;
+    align-self: center;
     font-weight: 900;
+
 }
 
 .titulo-header a{
-    color: #022037;
     text-decoration: none;
+    color: #022037;
     text-align: center;
 }
 
 .titulo-header a:hover{
-        color:#FFE0AA;
+    color: #FFE0AA;
 }
-
 .blink{
     animation: blinker 1s linear infinite;
-} 
-
+}  
   #panel-login-msg{
       display:grid;
       grid-template-columns: 1fr;
-      justify-items: center;
-      padding: 2%;
+      grid-template-rows: 50px;
+      text-align: center;
+      margin: 0 auto;
+      width: 30%;
+      
   }
   
   .mensaje-login{
-      background-color: #fff;
-      width: 30%;
+      background-color: #FFE0AA;
       text-align:  center;
-      border: 2px solid #DC93AF;
+      border: 2px solid #022037;
       border-radius: 20px;
-      
+      justify-content:  center;
   }
   .mensaje-login p{
-      font-size: 1.3em;
-      padding: 2%;
-         
+      text-align:  center;
+  
   }
   .msg-color-ok{
       color: #106022;
@@ -81,43 +79,44 @@ body{
   .msg-color-error{
       color: #530006;
   }
-  .container{
-   
-    width: 600px;
-    height: 400px;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    display: inline-flex; 
+
+  .container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:    50px 400px;
   }
+  
+  
+  
+
   .backbox{  
-    background-color: #FF9200;
-    width: 100%;
-    height: 90%;
-    position: absolute;
-    transform: translate(0,-50%);
-    top:50%;
-    display: inline-flex;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 2/4;
+    grid-row: 2/-1;
+    grid-template-rows: 1fr;   
+    background-color: rgba(255, 145, 0, .8);
+    border-radius: 20px; 
   }
   
   .frontbox{
+    
+    grid-column: 3/4;
+    grid-row: 2/5;
     background-color: white;
     border-radius: 20px;
-    height: 100%;
-    width: 50%;
     z-index: 10;
-    position: absolute;
-    right:0;
-    margin-right: 3%;
-    margin-left: 3%;
     transition: right .8s ease-in-out;
+    display: grid;
+    grid-template-columns: 1fr;
   }
   
   .moving{
     right:45%;
+    grid-column: 2/3; 
+   
   }
-  
+
   .loginMsg, .signupMsg{
     width: 50%;
     height: 100%;
@@ -134,13 +133,13 @@ body{
   .loginMsg p,
   .signupMsg p {
     font-weight: 100;
-    color: #022037;
   }
   
   .textcontent{
-    color: #022037;
+    color:#022037;
     margin-top:65px;
     margin-left: 12%;
+    font-weight: bolder;
   }
   
   .loginMsg button,
@@ -156,13 +155,13 @@ body{
     margin-top: 20px;
   }
   
-  /* front box content*/
-  .login, .signup{
+
+  .login-front, .signup{
     padding: 20px;
     text-align: center;
   }
   
-  .login h2,
+  .login-front h2,
   .signup h2 {
     color: #022037;
     font-size:22px;
@@ -170,8 +169,9 @@ body{
   
   .inputbox{
     margin-top:30px; 
+   
   }
-  .login input, 
+  .login-front input, 
   .signup input {
     display: block;
     width: 100%;
@@ -180,11 +180,13 @@ body{
     border: none;
     margin-bottom:20px;
     font-size: 12px;
+    border-radius: 20px;
+   
   }
   
-  .login button,
+  .login-front button,
   .signup button{
-    background-color: #35B729;
+    background-color: #106022;
     border: none;
     color:white;
     font-size: 12px;
@@ -192,33 +194,37 @@ body{
     box-sizing: content-box;
     padding:10px;
     border-radius: 10px;
-    width: 90px;
-    position: absolute;
-    right:30px;
-    bottom: 30px;
     cursor: pointer;
+    width: 90px;
+   
+    align-self: end;
+    
   }
-  
+  .login-front button:hover,
+  .signup button:hover{
+      background-color: #0aa82f;
+  }
+
   #switch1, #switch2{
-     color: #022037;
-  }
-   #switch1:hover, 
-   #switch2:hover{
-     
-     background-color: #FFE0AA;
- 
-     cursor: pointer;
+    color: #022037;
+ }
+  
+ #switch1:hover,
+  #switch2:hover{
+    background-color: #FFE0AA;
+   
+    cursor: pointer;
+    
   }
   
-  /* Fade In & Out*/
-  .login p {
+  .login-front p {
     cursor: pointer;
     color:#404040;
     font-size:15px;
   }
   
   .loginMsg, .signupMsg{
-    /*opacity: 1;*/
+   
     transition: opacity .8s ease-in-out;
   }
   
@@ -229,16 +235,10 @@ body{
   .hide{
     display: none;
   }
-  
-  @media (max-width:600px){
-    .container{
-        width: 350px; 
-      }
 
-  }  
-  
   @keyframes blinker {
     50% {
           opacity: 0;
          }
        }
+
